@@ -72,21 +72,6 @@ The Whisper model downloads on first start. Check http://localhost:8001/health. 
 
 `backend/src/main/resources/application.yml`:
 
-| Setting | Default | Notes |
-|---|---|---|
-| `app.ollama.base-url` | `http://localhost:11434` | or env `OLLAMA_BASE_URL` |
-| `app.ollama.model` | `llama3.2:3b` | or env `OLLAMA_MODEL`; must be pulled first |
-| `app.ollama.timeout-seconds` | `120` | first call is slow while the model loads |
-| `app.ollama.keep-alive` | `10m` | how long the model stays in memory |
-
-## Good to know
-
-- **Speech recognition in Chrome and Edge sends audio to the browser vendor's servers.** It's free,
-  but not offline. For fully offline voice input, run a local Whisper server (e.g. whisper.cpp)
-  and send audio to it instead.
-- **Speech synthesis is fully local** and uses the voices installed on your computer.
-- Mic access needs `localhost` or HTTPS.
-
 ## Project layout
 
 ```
@@ -102,18 +87,3 @@ backend/src/main/resources/
 ├── data/slides.json     the deck
 └── static/              index.html, style.css, app.js (served at /)
 ```
-
-## Editing the deck
-
-Edit `data/slides.json`. Each slide has `title`, `bullets`, and `notes`.
-The notes are what the presenter reads and uses to answer questions.
-
-## WebSocket protocol
-
-| Direction | Message | Meaning |
-|---|---|---|
-| client → server | `{"type":"text","text":"..."}` | what the user said or typed |
-| client → server | `{"type":"navigate","action":"next\|previous\|goto","slide":3}` | silent navigation |
-| server → client | `{"type":"status","state":"thinking\|idle"}` | progress |
-| server → client | `{"type":"agent_response", ...}` | `action`, `slide_index`, `transcript`, `speech` |
-| server → client | `{"type":"error","message":"..."}` | turn failed, with how to fix it |
