@@ -51,23 +51,6 @@ No `mvn` on your PATH? Use IntelliJ's bundled Maven, for example on Windows:
 
 **Tests:** `mvn test` (no Ollama needed)
 
-## Voice service (optional, Python)
-
-`voice-service/` is an offline speech-to-text (faster-whisper) and text-to-speech (Piper) API on port 8001.
-The page currently uses the browser's built-in speech, so the backend runs fine without it.
-
-```bash
-cd voice-service
-python -m venv .venv
-.venv\Scripts\activate             # macOS/Linux: source .venv/bin/activate
-pip install -r requirements.txt
-copy .env.example .env             # macOS/Linux: cp .env.example .env
-python -m piper.download_voices en_US-lessac-medium --download-dir models
-uvicorn app.main:app --port 8001
-```
-
-The Whisper model downloads on first start. Check http://localhost:8001/health. Tests: `pytest`.
-
 ## Configuration
 
 `backend/src/main/resources/application.yml`:
