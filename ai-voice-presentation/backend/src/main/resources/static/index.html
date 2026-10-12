@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Voice Presenter</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=Atkinson+Hyperlegible:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <div class="app">
+    <header class="topbar">
+      <span class="topbar__title" id="deck-title">Voice Presenter</span>
+      <span class="topbar__count" id="slide-count"></span>
+      <div class="status status--disconnected" id="status" role="status">
+        <span class="status__light" aria-hidden="true"></span>
+        <span id="status-text">Connecting to server</span>
+      </div>
+    </header>
+
+    <main class="stage">
+      <section class="slide" id="slide" aria-live="polite">
+        <h1 class="slide__title" id="slide-title">Loading slides…</h1>
+        <ul class="slide__bullets" id="slide-bullets"></ul>
+        <div class="slide__progress" id="slide-progress" aria-hidden="true"></div>
+      </section>
+
+      <aside class="transcript" aria-label="Conversation">
+        <h2 class="transcript__heading">Conversation</h2>
+        <p class="transcript__empty" id="transcript-empty">
+          Press Speak and say “next slide”, “go to slide 3”, or ask a question about the topic.
+          The presenter jumps to the slide that answers it. Press Stop or Esc, or just press Speak, to interrupt.
+        </p>
+        <ol class="transcript__list" id="transcript-list"></ol>
+      </aside>
+    </main>
+
+    <div class="controls">
+      <button class="nav-btn" id="prev-btn" aria-label="Previous slide">‹</button>
+      <button class="mic" id="mic-btn" aria-pressed="false">
+        <span class="mic__ring" aria-hidden="true"></span>
+        <span class="mic__label" id="mic-label">Speak</span>
+      </button>
+      <button class="nav-btn" id="next-btn" aria-label="Next slide">›</button>
+      <button class="stop-btn" id="stop-btn" disabled title="Stop the presenter (Esc)">Stop</button>
+      <label class="barge" title="Talk over the presenter to interrupt it. Use headphones so the mic doesn't hear the speakers.">
+        <input type="checkbox" id="barge-toggle">
+        Interrupt by voice <span class="barge__hint">(headphones)</span>
+      </label>
+
+      <form class="type-box" id="type-form">
+        <label for="typed" class="visually-hidden">Type a message</label>
+        <input id="typed" placeholder="Or type a question" autocomplete="off">
+        <button type="submit" id="send-btn" disabled>Send</button>
+      </form>
+    </div>
+  </div>
+
+  <script src="/app.js"></script>
+</body>
+</html>

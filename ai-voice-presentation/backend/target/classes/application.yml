@@ -1,0 +1,18 @@
+server:
+  port: 8000
+
+app:
+  ollama:
+    base-url: ${OLLAMA_BASE_URL:http://localhost:11434}
+    model: ${OLLAMA_MODEL:llama3.2:3b}
+    temperature: 0.3
+    # Local models can be slow on the first call while they load into memory.
+    timeout-seconds: 120
+    # How long Ollama keeps the model loaded between requests.
+    keep-alive: 10m
+  voice:
+    # Python voice service (voice-service/): uvicorn app.main:app --port 8001
+    base-url: ${VOICE_SERVICE_URL:http://localhost:8001}
+    timeout-seconds: 60
+  slides-path: classpath:data/slides.json
+  max-history-turns: 8

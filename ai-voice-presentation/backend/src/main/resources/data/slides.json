@@ -1,0 +1,53 @@
+{
+  "title": "From Molecule to Medicine",
+  "slides": [
+    {
+      "id": 1,
+      "title": "From molecule to medicine",
+      "bullets": ["How a new drug goes from the lab to the pharmacy", "Discovery, testing, approval and safety monitoring"],
+      "notes": "Welcome. Today we walk through how a new medicine is developed, from the first idea in the lab to a product patients can use. You can say next, go back, jump to any slide, or ask me a question at any time."
+    },
+    {
+      "id": 2,
+      "title": "Drug discovery",
+      "bullets": ["Pick a disease target, such as a protein or gene", "Screen thousands of compounds for activity", "Optimise the best hits into a lead candidate"],
+      "notes": "Discovery starts with a biological target linked to a disease. Scientists screen large libraries of compounds to find ones that act on that target, then chemists refine the most promising hits to improve potency, selectivity and safety. Only a handful of candidates move forward."
+    },
+    {
+      "id": 3,
+      "title": "Preclinical testing",
+      "bullets": ["Lab and animal studies before any human dosing", "Check toxicity, dosing range and how the body handles the drug", "Run under Good Laboratory Practice (GLP)"],
+      "notes": "Before a drug can be given to people, it is tested in cells and animals. These studies look at toxicity, a safe starting dose, and pharmacokinetics, meaning how the drug is absorbed, distributed, metabolised and excreted. The results support an application to start human trials, such as an Investigational New Drug application in the United States."
+    },
+    {
+      "id": 4,
+      "title": "Clinical trials",
+      "bullets": ["Phase 1: safety and dosing in a small group", "Phase 2: early effectiveness and side effects in patients", "Phase 3: large trials confirming benefit against standard care"],
+      "notes": "Clinical development runs in phases. Phase 1 usually involves a small number of healthy volunteers or patients and focuses on safety and dose. Phase 2 tests whether the drug works in patients with the condition. Phase 3 enrols much larger groups to confirm effectiveness and monitor side effects. Most candidates that enter clinical trials do not reach approval, and the whole journey often takes ten years or more."
+    },
+    {
+      "id": 5,
+      "title": "Regulatory approval",
+      "bullets": ["Submit all data to regulators: NDA or BLA to the US FDA, MAA to the EMA", "Regulators review safety, efficacy and manufacturing quality", "Approval comes with an agreed label for doctors and patients"],
+      "notes": "Once Phase 3 is complete, the company submits a full dossier to regulators. In the United States that is a New Drug Application or Biologics License Application to the FDA. In Europe it is a Marketing Authorisation Application to the European Medicines Agency, and in India the regulator is the CDSCO. Reviewers check the benefit-risk balance and whether the drug can be manufactured consistently."
+    },
+    {
+      "id": 6,
+      "title": "Manufacturing and quality",
+      "bullets": ["Produced under Good Manufacturing Practice (GMP)", "Every batch tested for identity, purity and strength", "Sites are inspected by regulators"],
+      "notes": "Approved medicines must be made under Good Manufacturing Practice. That means controlled processes, validated equipment, trained staff and full documentation. Each batch is tested before release, and regulators inspect manufacturing sites to make sure standards are maintained."
+    },
+    {
+      "id": 7,
+      "title": "Pharmacovigilance",
+      "bullets": ["Safety monitoring continues after launch", "Doctors and patients report adverse events", "Labels can be updated, or a drug withdrawn, if new risks appear"],
+      "notes": "Clinical trials cannot detect every rare side effect, so monitoring continues once the drug is on the market. This is called pharmacovigilance. Adverse event reports from doctors, patients and studies are collected and analysed, and companies may run Phase 4 studies. If new risks emerge, regulators can require label changes or, in serious cases, withdraw the product."
+    },
+    {
+      "id": 8,
+      "title": "Questions",
+      "bullets": ["Ask about any stage of drug development", "Say 'start over' to go back to the beginning"],
+      "notes": "That brings us to the end of the journey from molecule to medicine. I'm happy to answer questions about discovery, trials, approval, manufacturing or safety monitoring."
+    }
+  ]
+}
