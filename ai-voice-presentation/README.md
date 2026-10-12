@@ -41,16 +41,6 @@ mvn spring-boot:run
 
 Open http://localhost:8000.
 
-**In IntelliJ:** open the `backend` folder and run `VoicePresentationApplication`.
-
-To use a different model without editing files, set the environment variable `OLLAMA_MODEL`
-(for example `OLLAMA_MODEL=qwen2.5:7b`).
-
-No `mvn` on your PATH? Use IntelliJ's bundled Maven, for example on Windows:
-`"C:\Program Files\JetBrains\IntelliJ IDEA 2023.1.3\plugins\maven\lib\maven3\bin\mvn.cmd" spring-boot:run`
-
-**Tests:** `mvn test` (no Ollama needed)
-
 ## Configuration
 
 `backend/src/main/resources/application.yml`:
